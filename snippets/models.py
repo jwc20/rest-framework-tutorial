@@ -34,7 +34,7 @@ class Snippet(models.Model):
         formatters = HtmlFormatter(
             style=self.style, linenos=linenos, full=True, **options
         )
-        self.highlighted = highlight(self.code, lexer, formatter)
+        self.highlighted = highlight(self.code, lexer, formatters)
         super(Snippet, self).save(*args, **kwargs)
 
     def __str__(self):
