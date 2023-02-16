@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import generics
 
 from .models import Snippet
-from .serializers import SnippetSerializer
+from .serializers import SnippetSerializer, UserSerializer
 
 
 class SnippetList(generics.ListCreateAPIView):
